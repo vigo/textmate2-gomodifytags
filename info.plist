@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>contactEmailRot13</key>
+	<string>hthebmlvyznmry@tznvy.pbz</string>
+	<key>contactName</key>
+	<string>Uğur Özyılmazel</string>
+	<key>description</key>
+	<string>Struct helper for go code. Uses https://github.com/fatih/gomodifytags
+Generates struct tags for you current selection!
+
+Install `gomodifytags` via;
+
+```bash
+go install github.com/fatih/gomodifytags@latest
+```
+
+Don’t forget to add go binary path to your TextMate `$PATH`:
+
+```bash
+go env GOPATH # get the value and set your PATH variable in TextMate/Settings/Variables
+```
+
+    [] PATH &lt;your-GOPATH-value&gt;:&lt;EXISTING-ITEMS&gt;
+</string>
+    <key>mainMenu</key>
+    <dict>
+    	<key>items</key>
+    	<array>
+    		<string>------------------------------------</string>
+            <string>145AEB77-C5E0-406F-A4BF-719213845705</string>
+            <string>1422184B-E4B1-4901-BA4D-17C9DB03E3BB</string>
+            <string>44DC0528-7EB6-468C-B767-9AB0927A33BA</string>
+            <string>1C56B6D6-8ED2-42D0-AE45-8E5F4CCB670F</string>
+            <string>025DB7FA-F4B7-4BBB-9266-2DD5CD896C9B</string>
+    		<string>------------------------------------</string>
+            <string>F2DDC595-0F3D-49B0-8D00-D8C407560D1C</string>
+            <string>5D7070A5-B9F0-4550-8D7B-327126340E92</string>
+            <string>E8176B74-06F8-45D4-8AF4-7BB1B8382B51</string>
+            <string>0E9C0189-067B-4060-B1A5-40DDDE21A403</string>
+            <string>2AA0DC5B-D89E-46A4-A4A5-21E5DCD7AC4E</string>
+            <string>------------------------------------</string>
+            <string>3C51F3D4-435A-4A92-83E7-AB47E537CFA4</string>
+            <string>------------------------------------</string>
+            <string>02198033-B06B-46BF-88F9-67AE0AB1A320</string>
+            <string>73FE939E-DB28-43A1-8D7A-4B871022B37F</string>
+            <string>D123E6EE-10BF-4D62-BAD8-48D0BB84352B</string>
+            <string>------------------------------------</string>
+    	</array>
+    </dict>
+    
+	<key>name</key>
+	<string>Go Modify Tags</string>
+	<key>uuid</key>
+	<string>F9BD0B0A-E60E-4493-B3E1-1166FFCB6EE1</string>
+</dict>
+</plist>

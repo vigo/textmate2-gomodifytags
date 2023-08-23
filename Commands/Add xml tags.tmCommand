@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>beforeRunningCommand</key>
+	<string>nop</string>
+	<key>command</key>
+	<string>#!/bin/bash
+
+source "${TM_BUNDLE_SUPPORT}/modifytags.bash"
+
+modify_tags "xml" "-add-tags"</string>
+	<key>input</key>
+	<string>selection</string>
+	<key>inputFormat</key>
+	<string>text</string>
+	<key>keyEquivalent</key>
+	<string>~@t</string>
+	<key>name</key>
+	<string>Add xml tags</string>
+	<key>outputCaret</key>
+	<string>interpolateByChar</string>
+	<key>outputFormat</key>
+	<string>text</string>
+	<key>outputLocation</key>
+	<string>replaceInput</string>
+	<key>scope</key>
+	<string>source.go</string>
+	<key>uuid</key>
+	<string>1422184B-E4B1-4901-BA4D-17C9DB03E3BB</string>
+	<key>version</key>
+	<integer>2</integer>
+</dict>
+</plist>
