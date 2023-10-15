@@ -8,12 +8,23 @@ set -o pipefail
 set -o errexit
 set -o nounset
 
+exit_show_tool_tip () { echo -n -e "$1" >&1; exit 206; }
 
 modify_tags(){
-    # Extract struct name
+    if [ -z ${TM_FILEPATH+x} ]; then
+        exit_show_tool_tip "you must save the file first!"
+    fi
+
+    if [[ ! "${TM_SELECTION}" == *-* ]]; then
+        exit_show_tool_tip "your selection is empty, please select lines"
+    fi
+
+    if [ -z "$(command -v gomodifytags)" ]; then
+        exit_show_tool_tip "please make sure:\n\nyou have installed gomodifytags\nand set TM PATH variable (go env GOPATH)"
+    fi
+
     STRUCT_NAME=$(awk '/type [A-Z][a-zA-Z]* struct {/{print $2}' "${TM_FILEPATH}")
 
-    # If no struct name is found, exit
     [ -z "${STRUCT_NAME}" ] && return 1
     
     local tag_name="${1}"
@@ -47,11 +58,9 @@ modify_tags(){
             ;;
     esac
     
-    # echo "${args[@]}"
-
     MODIFIED_STRUCT=$(gomodifytags "${args[@]}")
 
-    # Extract the modified struct content using a more advanced AWK command
+
     echo "${MODIFIED_STRUCT}" | awk -v struct_name="${STRUCT_NAME}" '
     /type '"${STRUCT_NAME}"' struct {/ {print; p=1; count=1; next}
     p {

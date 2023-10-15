@@ -47,6 +47,16 @@ git pull origin main
 
 ---
 
+## Change Log
+
+**2023-10-15**
+
+- Fix unsaved file control (*won’t work if the file is not saved*)
+- Fix selection control (*won’t work if nothing is selected*)
+- Fix command existence check (*won’t work if the gomodifytags is not added to TM PATH*)
+
+---
+
 ## Editor Features
 
 All of the commands work with <kbd>⌥</kbd> + <kbd>⌘</kbd> + <kbd>T</kbd>
